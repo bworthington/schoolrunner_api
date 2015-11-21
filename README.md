@@ -3,7 +3,7 @@ The purpose of this project is to use SchoolRunner's API and do stuff with data 
 
 Here's the general idea:
 
-1. Connect one or more of SR's API endpoints (students, assessments, courses, etc.).
+1. Connect to one or more of SR's API endpoints (students, assessments, courses, etc.).
 2. Pasrse the JSON results and save the data to a SQLite database.
 3. Use SQLite to query the database to get the specific information we want.
 
@@ -24,7 +24,7 @@ One file is for the SQLite database: **sqlite-jdbc-3.8.11.2.jar**.  Find out mor
 **schoolrunner/api_processing** is a Java package that contains the core building blocks of this project:
 
 * **ConnectToSRAPI** is the class that handles the connection to a given API endpoint.
-* **Login** in the class that reads in a username and password for basic authentication in the API connection.
+* **Login** is the class that reads in a username and password for basic authentication in the API connection.
 * **CreateDatabase** is the class that creates a database.
 * **CreateTable** is the class that creates a given table within the database.
 * **AssessmentsAPI** is the class that connects to the Assessments endpoint (using ConnectToSRAPI).  It can use a default URL or receive a specified URL (for example, with more parameters) through an overloaded constructor.  It parses the JSON results and saves the data to the relevant table of the database.  The same idea holds true for other similar classes related to specific endpoints (StudentsAPI, StaffAPI, etc.).
