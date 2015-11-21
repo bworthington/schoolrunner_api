@@ -14,18 +14,18 @@ Possible applications:
 ### Requirements
 This code requires a few .jar files be installed first:
 
-Two files related to actually connecting to the API are: okhttp-2.5.0.jar and okio-1.6.0.jar.  Find out more and download them from http://square.github.io/okhttp/
+Two files related to actually connecting to the API are: **okhttp-2.5.0.jar** and **okio-1.6.0.jar**.  Find out more and download them from http://square.github.io/okhttp/
 
-One file is for JSON parsing: json-simple.1.1.1.jar.  Find out more and download it from https://code.google.com/p/json-simple/
+One file is for JSON parsing: **json-simple.1.1.1.jar**.  Find out more and download it from https://code.google.com/p/json-simple/
 
-One file is for the SQLite database: sqlite-jdbc-3.8.11.2.jar.  Find out more and download it from http://www.tutorialspoint.com/sqlite/sqlite_java.htm
+One file is for the SQLite database: **sqlite-jdbc-3.8.11.2.jar**.  Find out more and download it from http://www.tutorialspoint.com/sqlite/sqlite_java.htm
 
 ### How It's Organized
 **schoolrunner/api_processing** is a Java package that contains the core building blocks of this project:
 
 * **ConnectToSRAPI** is the class that handles the connection to a given API endpoint.
 * **Login** in the class that reads in a username and password for basic authentication in the API connection.
-* **CreateDatabase** is the class that creates a database for saving data return from the API.
-* **CreateTable** is the class that creates a given table within the database related certain endpoints.
+* **CreateDatabase** is the class that creates a database.
+* **CreateTable** is the class that creates a given table within the database.
 * **AssessmentsAPI** is the class that connects to the Assessments endpoint (using ConnectToSRAPI).  It can use a default URL or receive a specified URL (for example, with more parameters) through an overloaded constructor.  It parses the JSON resultss and saves the data to the relevant table of the database.  The same idea holds true for other similar classes related to specific endpoints (StudentsAPI, StaffAPI, etc.).
 * **DatabaseSetup** is the class that manages setting up an entire database.  It uses the CreateDatabase and CreateTable classes to setup a database (with a given filename) with specific tables.  It provides public methods that can be invoked in other classes to set up a database with any combination of tables we want.  The methods that set up a given table, like Assessments, also call on the related endpointAPI class, like AssessmentsAPI, to go ahead and connect to the API and populate the table with that data.
