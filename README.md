@@ -12,7 +12,7 @@ Possible applications:
 ### Requirements
 This code requires a few .jar files be installed first:
 Two files related to actually connecting to the API are: okhttp-2.5.0.jar and okio-1.6.0.jar
-Find out more and download them from ([http://square.github.io/okhttp/])
+Find out more and download them from http://square.github.io/okhttp/
 
 One file is for JSON parsing: json-simple.1.1.1.jar
 Find out more and download it from ([https://code.google.com/p/json-simple/])
