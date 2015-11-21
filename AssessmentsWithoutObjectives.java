@@ -9,11 +9,12 @@ public class AssessmentsWithoutObjectives {
   public static void main(String args[]) {
     
     //file path for database
-    String dbName = "/home/ubuntu/workspace/databases/ASSESSMENTS_WITHOUT_OBJECTIVES.db";
+    String dbName = "/home/ubuntu/workspace/databases/SRDB.db";
     
     //file path for output .csv to be saved
     String fileName = "/home/ubuntu/workspace/output/Assessments_Without_Objectives.csv";
     
+    //custom endpoint url that includes the parameter has_objectives=0, results only include assessments that are missing objectives
     String assessmentEndpoint = "https://renew.schoolrunner.org/api/v1/assessments/?limit=30000&active=1&min_date=2015-07-22&has_objectives=0";
     
     DatabaseSetup database = new DatabaseSetup();
