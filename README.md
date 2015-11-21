@@ -11,14 +11,14 @@ Possible applications:
 
 ### Requirements
 This code requires a few .jar files be installed first:
-Two files related to actually connecting to the API are: okhttp-2.5.0.jar and okio-1.6.0.jar
+Two files related to actually connecting to the API are: okhttp-2.5.0.jar and okio-1.6.0.jar.
 Find out more and download them from http://square.github.io/okhttp/
 
 One file is for JSON parsing: json-simple.1.1.1.jar
-Find out more and download it from ([https://code.google.com/p/json-simple/])
+Find out more and download it from https://code.google.com/p/json-simple/
 
 One file is for the SQLite database: sqlite-jdbc-3.8.11.2.jar
-Find out more and download it from ([http://www.tutorialspoint.com/sqlite/sqlite_java.htm])
+Find out more and download it from http://www.tutorialspoint.com/sqlite/sqlite_java.htm
 
 ### How It's Organized
 **schoolrunner/api_processing** is a Java package that contains the core building blocks of this project:
